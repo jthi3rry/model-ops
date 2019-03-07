@@ -21,13 +21,13 @@ RUN apt-get remove -y --auto-remove openjdk* && \
     rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies
-RUN pip install pyspark numpy flask uwsgi
+RUN pip install pyspark==2.3 numpy flask uwsgi
 
 # Set up app
 RUN mkdir /app
 WORKDIR /app
 ADD api_predict_churn.py .
-ADD churn.spark churn.spark
+ADD models/churn.spark churn.spark
 
 # Set environment
 ENV MODEL_PATH churn.spark
