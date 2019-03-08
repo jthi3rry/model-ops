@@ -25,10 +25,10 @@ RUN mkdir /app
 WORKDIR /app
 
 # Set environment
-ENV MODEL_PATH models/model.spark
-ENV DATA_PATH dataset/hmeq.csv
+ENV MODEL_PATH models/churn.spark
+ENV DATA_PATH datasets/churn.csv
 
-COPY dataset dataset
+COPY datasets datasets
 COPY training.py training.py
 
 # Run API

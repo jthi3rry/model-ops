@@ -1,1 +1,0 @@
-{"class":"org.apache.spark.ml.feature.VectorAssembler","timestamp":1551990103595,"sparkVersion":"2.3.0","uid":"VectorAssembler_4b44b19b6286c0ae6b92","paramMap":{"inputCols":["REASON_indexed","JOB_indexed","LOAN","MORTDUE","VALUE","YOJ","DEROG","DELINQ","CLAGE","NINQ","CLNO","DEBTINC"],"outputCol":"features"}}

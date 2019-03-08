@@ -97,9 +97,9 @@ def predict():
 
   # Get predictions as json
   output_data = {"response": list(map(json.loads,
-    predictions.select(col('prediction').alias('churn'),
-                       prob_will_churn('probability').alias("P_churn1"),
-                       prob_wont_churn('probability').alias("P_churn0")) \
+    predictions.select(col('prediction').alias('churned'),
+                       prob_will_churn('probability').alias("P_churned1"),
+                       prob_wont_churn('probability').alias("P_churned0")) \
                .toJSON().collect()
   ))}
 
