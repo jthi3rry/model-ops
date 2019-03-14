@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "7c6220a8-7ffc-450d-ab20-ed2ecd2e497a",
+		"name": "CDSW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Score using CDSW model API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accessKey\": \"**** secret cdsw model access key ****\",\r\n    \"request\": [\r\n        {\r\n            \"state\": \"WV\",\r\n            \"account_length\": 141.0,\r\n            \"area_code\": \"415\",\r\n            \"phone_number\": \"330-8173\",\r\n            \"intl_plan\": \"yes\",\r\n            \"voice_mail_plan\": \"yes\",\r\n            \"number_vmail_messages\": 37.0,\r\n            \"total_day_minutes\": 258.6,\r\n            \"total_day_calls\": 84.0,\r\n            \"total_day_charge\": 43.96,\r\n            \"total_eve_minutes\": 222.0,\r\n            \"total_eve_calls\": 111.0,\r\n            \"total_eve_charge\": 18.87,\r\n            \"total_night_minutes\": 326.4,\r\n            \"total_night_calls\": 97.0,\r\n            \"total_night_charge\": 14.69,\r\n            \"total_intl_minutes\": 11.2,\r\n            \"total_intl_calls\": 5.0,\r\n            \"total_intl_charge\": 3.02,\r\n            \"number_customer_service_calls\": 0.0\r\n        },\r\n        {\r\n            \"state\": \"IN\",\r\n            \"account_length\": 65.0,\r\n            \"area_code\": \"415\",\r\n            \"phone_number\": \"329-6603\",\r\n            \"intl_plan\": \"no\",\r\n            \"voice_mail_plan\": \"no\",\r\n            \"number_vmail_messages\": 0.0,\r\n            \"total_day_minutes\": 129.1,\r\n            \"total_day_calls\": 137.0,\r\n            \"total_day_charge\": 21.95,\r\n            \"total_eve_minutes\": 228.5,\r\n            \"total_eve_calls\": 83.0,\r\n            \"total_eve_charge\": 19.42,\r\n            \"total_night_minutes\": 208.8,\r\n            \"total_night_calls\": 111.0,\r\n            \"total_night_charge\": 9.4,\r\n            \"total_intl_minutes\": 12.7,\r\n            \"total_intl_calls\": 6.0,\r\n            \"total_intl_charge\": 3.43,\r\n            \"number_customer_service_calls\": 4.0\r\n        }\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/altus-ds-1/models/call-model",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"altus-ds-1",
+						"models",
+						"call-model"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

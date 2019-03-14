@@ -4,11 +4,10 @@
 #
 #   docker run -p 8080:8080 jthierry/churn-model-api
 #
-FROM python:2.7-jessie
+FROM python:3.7-stretch
 
 # Install Java 8
-RUN apt-get remove -y --auto-remove openjdk* && \
-    apt-get update && \
+RUN apt-get update && \
     echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee /etc/apt/sources.list.d/webupd8team-java.list && \
     echo "deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" | tee -a /etc/apt/sources.list.d/webupd8team-java.list  && \
     apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886 && \

@@ -2,6 +2,8 @@
 #
 #      docker build -f training.Dockerfile -t pyspark-training .
 #
+#      docker run --rm -v ./models:/app/models pyspark-training
+#
 FROM python:3.7-stretch
 
 # Install Java 8

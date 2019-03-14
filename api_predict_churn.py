@@ -12,18 +12,70 @@
          -H "Accept: application/json" \
          -d {
           "accessKey": "cdsw model secret key",
-          "request": [
-              {"state":"WV","account_length":141.0,"area_code":" 415","phone_number":" 330-8173","intl_plan":" yes","voice_mail_plan":" yes","number_vmail_messages":37.0,"total_day_minutes":258.6,"total_day_calls":84.0,"total_day_charge":43.96,"total_eve_minutes":222.0,"total_eve_calls":111.0,"total_eve_charge":18.87,"total_night_minutes":326.4,"total_night_calls":97.0,"total_night_charge":14.69,"total_intl_minutes":11.2,"total_intl_calls":5.0,"total_intl_charge":3.02,"number_customer_service_calls":0.0},
-              {"state":"IN","account_length":65.0,"area_code":" 415","phone_number":" 329-6603","intl_plan":" no","voice_mail_plan":" no","number_vmail_messages":0.0,"total_day_minutes":129.1,"total_day_calls":137.0,"total_day_charge":21.95,"total_eve_minutes":228.5,"total_eve_calls":83.0,"total_eve_charge":19.42,"total_night_minutes":208.8,"total_night_calls":111.0,"total_night_charge":9.4,"total_intl_minutes":12.7,"total_intl_calls":6.0,"total_intl_charge":3.43,"number_customer_service_calls":4.0}
+          "request": {
+            "accessKey": "**** secret cdsw model access key ****",
+            "request": [
+                {
+                    "state": "WV",
+                    "account_length": 141.0,
+                    "area_code": "415",
+                    "phone_number": "330-8173",
+                    "intl_plan": "yes",
+                    "voice_mail_plan": "yes",
+                    "number_vmail_messages": 37.0,
+                    "total_day_minutes": 258.6,
+                    "total_day_calls": 84.0,
+                    "total_day_charge": 43.96,
+                    "total_eve_minutes": 222.0,
+                    "total_eve_calls": 111.0,
+                    "total_eve_charge": 18.87,
+                    "total_night_minutes": 326.4,
+                    "total_night_calls": 97.0,
+                    "total_night_charge": 14.69,
+                    "total_intl_minutes": 11.2,
+                    "total_intl_calls": 5.0,
+                    "total_intl_charge": 3.02,
+                    "number_customer_service_calls": 0.0
+                },
+                {
+                    "state": "IN",
+                    "account_length": 65.0,
+                    "area_code": "415",
+                    "phone_number": "329-6603",
+                    "intl_plan": "no",
+                    "voice_mail_plan": "no",
+                    "number_vmail_messages": 0.0,
+                    "total_day_minutes": 129.1,
+                    "total_day_calls": 137.0,
+                    "total_day_charge": 21.95,
+                    "total_eve_minutes": 228.5,
+                    "total_eve_calls": 83.0,
+                    "total_eve_charge": 19.42,
+                    "total_night_minutes": 208.8,
+                    "total_night_calls": 111.0,
+                    "total_night_charge": 9.4,
+                    "total_intl_minutes": 12.7,
+                    "total_intl_calls": 6.0,
+                    "total_intl_charge": 3.43,
+                    "number_customer_service_calls": 4.0
+                }
             ]
-          }'
+        }'
 
   Example Response:
 
     {
       "response": [
-        {"churn": 0.0, "P_churn0": 0.83930023, "P_churn1": 0.16069977},
-        {"churn": 1.0, "P_churn0": 0.28275055, "P_churn1": 0.71724945}
+          {
+              "P_churned0": 0.73694265,
+              "P_churned1": 0.26305735,
+              "churned": 0
+          },
+          {
+              "P_churned0": 0.5615052,
+              "P_churned1": 0.4384948,
+              "churned": 0
+          }
       ]
     }
 
